@@ -20,7 +20,6 @@ router.post('/search', async (req, res) =>{
             optimizeQuery:true
         }           
         let dataLyrics = await getLyrics(options).then((lyric) => lyric)
-        
 
         res.render('search', {lyrics:dataLyrics});   
         console.log(dataLyrics)    
